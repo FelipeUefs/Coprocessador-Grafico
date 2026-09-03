@@ -1,0 +1,322 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/felip/Downloads/Coprocessador_V3TESTE_corrigido (1)/Coprocessador_V1TESTE
+T_opt
+!s110 1788153219
+Vj6_R]NYnQ_PD0XoQG0XD11
+04 10 4 work tb_vga_ppm fast 0
+=1-9c6b002b4f47-6a950d83-226-1c88
+R1
+!s12b OEM100
+!s124 OEM10U11 
+o-quiet -auto_acc_if_foreign -work work -L altera_mf -L lpm
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vbackground_renderer
+Z4 2DE1_SOC_golden_top.v|background_renderer.v|motor_sprite.v|paleta_rom.v|paleta_rom_bb.v|ram_tile.v|ram_tile_bb.v|ram_tilemap_2port.v|ram_tilemap_2port_bb.v|rasterizador_poligonos.v|rom_memoria2.v|rom_memoria2_bb.v|tb_vga_ppm.v|top_coprocessador.v|unidade_de_controle.v|vga_driver.v
+Z5 !s110 1788153204
+!i10b 1
+!s100 eI<k_<Uj^mDVElSfL3=BD0
+IzLa[DgNimOHC[[7]FCZa21
+R2
+Z6 w1788146842
+8background_renderer.v
+Fbackground_renderer.v
+!i122 8
+L0 1 66
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z9 !s108 1788153204.000000
+Z10 !s107 vga_driver.v|unidade_de_controle.v|top_coprocessador.v|tb_vga_ppm.v|rom_memoria2_bb.v|rom_memoria2.v|rasterizador_poligonos.v|ram_tilemap_2port_bb.v|ram_tilemap_2port.v|ram_tile_bb.v|ram_tile.v|paleta_rom_bb.v|paleta_rom.v|motor_sprite.v|background_renderer.v|DE1_SOC_golden_top.v|
+Z11 !s90 -reportprogress|300|DE1_SOC_golden_top.v|background_renderer.v|motor_sprite.v|paleta_rom.v|paleta_rom_bb.v|ram_tile.v|ram_tile_bb.v|ram_tilemap_2port.v|ram_tilemap_2port_bb.v|rasterizador_poligonos.v|rom_memoria2.v|rom_memoria2_bb.v|tb_vga_ppm.v|top_coprocessador.v|unidade_de_controle.v|vga_driver.v|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vDE1_SOC_golden_top
+R4
+R5
+!i10b 1
+!s100 oRP^cQPgm5A=MaK4jY66g1
+Ib5NSe>7elzQ[M7z=CRd8Q2
+R2
+R6
+8DE1_SOC_golden_top.v
+FDE1_SOC_golden_top.v
+!i122 8
+L0 54 219
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+n@d@e1_@s@o@c_golden_top
+vmotor_sprite
+R4
+R5
+!i10b 1
+!s100 U`6EW4[N4?nzjC61K>W9T3
+IZbHojN<@bBOeoHSKBgid[2
+R2
+R6
+8motor_sprite.v
+Fmotor_sprite.v
+!i122 8
+L0 1 153
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vpaleta_rom
+R4
+R5
+!i10b 1
+!s100 k2<[Kb4Y<cEaZMkBUlzf10
+IOlZzT?iBA]9]bomnoDJg70
+R2
+R6
+8paleta_rom_bb.v
+Fpaleta_rom_bb.v
+8paleta_rom.v
+Fpaleta_rom.v
+!i122 8
+L0 35 17
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vram_tile
+R4
+R5
+!i10b 1
+!s100 zbime0j8h>@mkhP@iIC?41
+I><CSbLR7I@HEWBf7^`AB[1
+R2
+R6
+8ram_tile_bb.v
+Fram_tile_bb.v
+8ram_tile.v
+Fram_tile.v
+!i122 8
+Z13 L0 35 24
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vram_tilemap_2port
+R4
+R5
+!i10b 1
+!s100 =X4:XFSNU2SDnH5HU3a^<2
+I<J`>AAR:aSW[=eZQaJ3Pz2
+R2
+R6
+8ram_tilemap_2port_bb.v
+Fram_tilemap_2port_bb.v
+Z14 8ram_tilemap_2port.v
+Z15 Fram_tilemap_2port.v
+!i122 8
+R13
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vrasterizador_poligonos
+R4
+R5
+!i10b 1
+!s100 >[`M?BA9F]YV3`[oD>eQ?2
+ILVM<PjFChmi`[GcW`U1_^3
+R2
+R6
+8rasterizador_poligonos.v
+Frasterizador_poligonos.v
+R14
+R15
+!i122 8
+L0 1 75
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vrom_memoria2
+R4
+R5
+!i10b 1
+!s100 XjM:DMKPYDOe<5=<igi@P0
+I?FQKDRZf?dc1I<S`WGji70
+R2
+R6
+8rom_memoria2_bb.v
+From_memoria2_bb.v
+8rom_memoria2.v
+From_memoria2.v
+!i122 8
+L0 35 21
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vtb_vga_ppm
+R4
+R5
+!i10b 1
+!s100 aVm1m3AC>K=dm28hW6ik_1
+If=fBMG:Mik2K6lCKNNHeG2
+R2
+Z16 w1788153192
+Z17 8tb_vga_ppm.v
+Z18 Ftb_vga_ppm.v
+!i122 8
+L0 10 96
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vtop_coprocessador
+R4
+R5
+!i10b 1
+!s100 5^PaZ@oSLK6<B@H`nF><42
+IbmXM?oMdHGQfUj<CcP<^O3
+R2
+R16
+8top_coprocessador.v
+Ftop_coprocessador.v
+R17
+R18
+!i122 8
+L0 1 200
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vunidade_de_controle
+R4
+R5
+!i10b 1
+!s100 Y8m8GYGglam>HER4C2XLO2
+I_<WFajed`3PkdoBHh7VCE2
+R2
+R16
+8unidade_de_controle.v
+Funidade_de_controle.v
+R17
+R18
+!i122 8
+L0 1 120
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vvga_driver
+R4
+R5
+!i10b 1
+!s100 B2268;4@fW;^V?AS5IIZ52
+IY7ONZT7Do=g1nlHWNYOcY1
+R2
+R16
+8vga_driver.v
+Fvga_driver.v
+R17
+R18
+!i122 8
+L0 1 125
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3

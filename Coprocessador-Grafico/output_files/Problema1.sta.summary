@@ -1,0 +1,133 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -10.426
+TNS   : -1598.688
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -2.644
+TNS   : -2.644
+
+Type  : Slow 1100mV 85C Model Hold 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 1.242
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -2.195
+TNS   : -68.763
+
+Type  : Slow 1100mV 85C Model Removal 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : 1.083
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -2.174
+TNS   : -3477.686
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.748
+TNS   : -1.266
+
+Type  : Slow 1100mV 0C Model Setup 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -10.584
+TNS   : -1552.830
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.500
+TNS   : -2.500
+
+Type  : Slow 1100mV 0C Model Hold 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 1.124
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -2.147
+TNS   : -66.630
+
+Type  : Slow 1100mV 0C Model Removal 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : 0.985
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -2.174
+TNS   : -3457.989
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.780
+TNS   : -1.355
+
+Type  : Fast 1100mV 85C Model Setup 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -5.564
+TNS   : -885.180
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -2.086
+TNS   : -2.086
+
+Type  : Fast 1100mV 85C Model Hold 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : 0.095
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 1.225
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -1.032
+TNS   : -29.130
+
+Type  : Fast 1100mV 85C Model Removal 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : 0.568
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -2.174
+TNS   : -3370.430
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.807
+TNS   : -1.430
+
+Type  : Fast 1100mV 0C Model Setup 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -5.177
+TNS   : -762.325
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -1.763
+TNS   : -1.763
+
+Type  : Fast 1100mV 0C Model Hold 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : 0.079
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.914
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -0.879
+TNS   : -24.933
+
+Type  : Fast 1100mV 0C Model Removal 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : 0.493
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'top_coprocessador:meu_nucleo_grafico|clk_25m'
+Slack : -2.174
+TNS   : -3350.821
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.846
+TNS   : -1.566
+
+------------------------------------------------------------

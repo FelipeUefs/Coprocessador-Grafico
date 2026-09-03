@@ -1,0 +1,120 @@
+module unidade_de_controle (
+    input  wire       clk,
+    input  wire       reset,         // Ativo em baixo (~KEY[0])
+    input  wire       btn_change,    // Botão de troca de estado (~KEY[1])
+    input  wire       btn_rect,      // Botão liga/desliga retangulo (~KEY[2])
+    input  wire       btn_tri,       // Botão liga/desliga triangulo (~KEY[3])
+    input  wire       fim_de_quadro, // Pulso de sincronismo da tela
+    input  wire [7:0] sw,            // Chaves da placa
+
+    output reg  [8:0] bg_scroll_x,
+    output reg  [7:0] bg_scroll_y,
+    output reg  [8:0] boneco_x,
+    output reg  [7:0] boneco_y,
+    output reg  [7:0] cor_de_fundo,
+    output reg  [7:0] rect_color,    // Cor de preenchimento do retangulo
+    output reg  [7:0] tri_color,     // Cor de preenchimento do triangulo
+    output reg        rect_visible,  // Alterna (toggle) a cada aperto de btn_rect
+    output reg        tri_visible    // Alterna (toggle) a cada aperto de btn_tri
+);
+
+    // =========================================================================
+    // Limites de posicao do sprite (16x16) dentro da tela logica 320x240
+    // MAX_X = 320 - 16 = 304 ; MAX_Y = 240 - 16 = 224
+    // Sem esses limites, a soma/subtracao sem sinal "estoura" e o sprite
+    // teleporta para o lado oposto da tela em vez de parar na borda.
+    // =========================================================================
+    localparam [8:0] SPRITE_MAX_X = 9'd304;
+    localparam [7:0] SPRITE_MAX_Y = 8'd224;
+
+    // Definição dos Estados
+    parameter STATE_SCROLL     = 3'd0;
+    parameter STATE_SPRITE     = 3'd1;
+    //parameter STATE_BG_COLOR   = 3'd2;
+    parameter STATE_RECT_COLOR = 3'd2;
+    parameter STATE_TRI_COLOR  = 3'd3;
+
+    reg [2:0] current_state;
+    reg       btn_last_state;
+    wire      btn_pressed = (btn_change && !btn_last_state);
+
+    // Detecção de borda de subida para os botões de retângulo/triângulo
+    reg       btn_rect_last, btn_tri_last;
+    wire      btn_rect_pressed = (btn_rect && !btn_rect_last);
+    wire      btn_tri_pressed  = (btn_tri  && !btn_tri_last);
+
+    always @(posedge clk) begin
+        if (~reset) begin
+            current_state  <= STATE_SCROLL;
+            btn_last_state <= 1'b0;
+            btn_rect_last  <= 1'b0;
+            btn_tri_last   <= 1'b0;
+            rect_visible   <= 1'b0;
+            tri_visible    <= 1'b0;
+
+            bg_scroll_x  <= 9'd0;
+            bg_scroll_y  <= 8'd0;
+            boneco_x     <= 9'd160;
+            boneco_y     <= 8'd120;
+            cor_de_fundo <= 8'd0;
+            rect_color   <= 8'd1;  // mesmo valor que era hardcoded no top antes
+            tri_color    <= 8'd2;  // mesmo valor que era hardcoded no top antes
+        end else begin
+            // 1. Gerenciamento do Botão e Transição de Estados
+            btn_last_state <= btn_change;
+
+            if (btn_pressed) begin
+                if (current_state == STATE_TRI_COLOR)
+                    current_state <= STATE_SCROLL;
+                else
+                    current_state <= current_state + 3'd1;
+            end
+
+            // 1b. Alterna visibilidade do retângulo/triângulo a cada aperto
+            //     (borda de subida, não nível — por isso não "some" ao soltar)
+            btn_rect_last <= btn_rect;
+            btn_tri_last  <= btn_tri;
+            if (btn_rect_pressed) rect_visible <= ~rect_visible;
+            if (btn_tri_pressed)  tri_visible  <= ~tri_visible;
+
+            // 2. Roteamento das Chaves (SW) baseado no Estado Atual
+            if (fim_de_quadro) begin
+                case (current_state)
+                    STATE_SCROLL: begin
+                        if (sw[0]) bg_scroll_x <= bg_scroll_x + 9'd1; // Direita
+                        if (sw[1]) bg_scroll_x <= bg_scroll_x - 9'd1; // Esquerda
+                        if (sw[2]) bg_scroll_y <= bg_scroll_y + 8'd1; // Baixo
+                        if (sw[3]) bg_scroll_y <= bg_scroll_y - 8'd1; // Cima
+                    end
+
+                    STATE_SPRITE: begin
+                        // Eixo X (Esquerda/Direita) - com clamp nas bordas
+                        if (sw[0] && ~sw[1] && (boneco_x < SPRITE_MAX_X))
+                            boneco_x <= boneco_x + 9'd1;
+                        if (sw[1] && ~sw[0] && (boneco_x > 9'd0))
+                            boneco_x <= boneco_x - 9'd1;
+
+                        // Eixo Y (Cima/Baixo) - NOVO, com o mesmo clamp
+                        if (sw[2] && ~sw[3] && (boneco_y < SPRITE_MAX_Y))
+                            boneco_y <= boneco_y + 8'd1; // Baixo
+                        if (sw[3] && ~sw[2] && (boneco_y > 8'd0))
+                            boneco_y <= boneco_y - 8'd1; // Cima
+                    end
+
+                    /*STATE_BG_COLOR: begin
+                        cor_de_fundo <= sw[7:0];
+                    end*/
+
+                    STATE_RECT_COLOR: begin
+                        rect_color <= sw[7:0];
+                    end
+
+                    STATE_TRI_COLOR: begin
+                        tri_color <= sw[7:0];
+                    end
+                endcase
+            end
+        end
+    end
+
+endmodule
