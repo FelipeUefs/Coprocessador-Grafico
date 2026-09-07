@@ -161,6 +161,7 @@ Para compilar e gravar o projeto na DE1-SoC:
  A compilação será finalizada quando a barra de progresso atingir **100%** e for exibida a mensagem **"Successful"**, indicando que o projeto foi compilado com sucesso.
  
 **Programação da FPGA**
+
 Após a compilação bem-sucedida.
 1. Conecte a DE1-SoC ao computador via USB-Blaster e ligue a placa.
 2. Vá em **Tools > Programmer**.
