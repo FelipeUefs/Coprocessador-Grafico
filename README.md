@@ -1,4 +1,4 @@
-<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 51 45" src="https://github.com/user-attachments/assets/4dca78e9-76aa-405a-8aed-42448243c98e" />**Universidade Estadual de Feira de Santana (UEFS)**  
+" />**Universidade Estadual de Feira de Santana (UEFS)**  
 **Departamento de Tecnologia - Área de Eletrônica**  
 **Disciplina: Sistemas Digitais (TEC499) - 2026.2**  
 **Autores: Felipe Gomes, Mirela Mascarenhas e Caio Bruno**
