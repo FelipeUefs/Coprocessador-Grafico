@@ -1,4 +1,4 @@
-**Universidade Estadual de Feira de Santana (UEFS)**  
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 51 45" src="https://github.com/user-attachments/assets/4dca78e9-76aa-405a-8aed-42448243c98e" />**Universidade Estadual de Feira de Santana (UEFS)**  
 **Departamento de Tecnologia - Área de Eletrônica**  
 **Disciplina: Sistemas Digitais (TEC499) - 2026.2**  
 **Autores: Felipe Gomes, Mirela Mascarenhas e Caio Bruno**
@@ -8,7 +8,7 @@ Para a elaboração do projeto, foi utilizado o kit de desenvolvimento DE1-SoC c
 O objetivo deste projeto é projetar o núcleo de um coprocessador gráfico em FPGA. O hardware foi desenvolvido visando a arquitetura de consoles clássicos de 16 bits, operando com suporte a um plano de fundo (baseado em tiles), sprite móvel e um rasterizador de polígonos. O coprocessador funciona de modo isolado nesta primeira fase, mas está preparado para integração via Memory-Mapped I/O (MMIO) com um driver Linux em Assembly (processador ARM) e uma aplicação em C em etapas futuras.
 
 <img width="600" alt="Placa DE1-SoC" src="https://github.com/user-attachments/assets/4e606e05-cef6-4a21-8f5b-80f50d49108b" />
-*Imagem da placa DE1-SoC retirada do site da Altera*
+Imagem da placa DE1-SoC retirada do site da Altera
 
 ---
 
@@ -145,23 +145,39 @@ A composição das camadas segue a prioridade: **Sprite > Polígono > Background
 
 ## 5. Instalação e Configuração
 
+Esta subseção apresenta o passo a passo para realizar a compilação do projeto utilizando o Intel Quartus Prime. Inicialmente, serão descritos os procedimentos necessários para a execução da compilação e, em seguida, serão apresentadas imagens ilustrativas com o objetivo de facilitar a compreensão e tornar o processo mais intuitivo.
+
 Para compilar e gravar o projeto na DE1-SoC:
 
 1. Clone este repositório para a sua máquina local.
 2. Abra o Intel Quartus Prime Lite Edition.
-3. Vá em **File > Open Project** e selecione o arquivo do projeto `.qpf`.
+3. Vá em **File > Open Project** e selecione o arquivo do projeto `Problema1.qpf`.
 4. Certifique-se de que os arquivos `.mif` (Memória de Inicialização) estão no mesmo diretório do projeto ou mapeados corretamente nos módulos MegaWizard/IP Catalog.
 5. Clique em **Compile Design** e aguarde a finalização.
-6. Conecte a DE1-SoC ao computador via USB-Blaster e ligue a placa.
-7. Vá em **Tools > Programmer**.
-8. Selecione o arquivo `.sof` gerado na pasta `output_files`.
-9. Clique em **Start** para gravar o bitstream na FPGA.
+> **Nota:**
+> Não é necessário gerar novas memórias nem  realizar a atribuição de pinos caso todos os arquivos do projeto tenham sido baixados, pois os arquivos de memória necessários já estão previamente gerados e incluídos no projeto.
+>  A compilação será finalizada quando a barra de progresso atingir **100%** e for exibida a mensagem **"Successful"**, indicando que o projeto foi compilado com sucesso.
+> Programação da FPGA
+Após a compilação bem-sucedida.
+1. Conecte a DE1-SoC ao computador via USB-Blaster e ligue a placa.
+2. Vá em **Tools > Programmer**.
+3. Clique em **Start** para gravar o bitstream na FPGA.
+
+As imagens abaixo ilustram o processo
+
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 43 58" src="https://github.com/user-attachments/assets/6e250be9-1362-4259-b4f9-b82e2c4c6cdf" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 47 13" src="https://github.com/user-attachments/assets/654cf621-6d7d-44de-ae18-9ede44128874" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 50 04" src="https://github.com/user-attachments/assets/8b9da221-1f56-4cf7-aaa0-49d91b22c29b" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 51 45" src="https://github.com/user-attachments/assets/afb77ad0-a36f-4ff1-b776-d2201ca5f4b6" />
 
 ---
 
 ## 6. Teste e Funcionamento
 
 Após gravar o bitstream na placa, o sistema exibirá no monitor o background via Tilemap e o sprite centralizado.
+
+<img width="795" height="502" alt="WhatsApp Image 2026-09-07 at 19 52 20" src="https://github.com/user-attachments/assets/113fffc9-1d08-45f5-ae47-3696976cbf77" />
+
 
 ### Controles de Demonstração (Botões - KEY)
 
@@ -214,4 +230,11 @@ O coprocessador gráfico foi implementado com sucesso na FPGA Cyclone V da placa
 * Os parâmetros geométricos base dos polígonos e grande parte da OAM dos sprites estão fixados no Hardware. A integração via MMIO permitirá que o código em C os configure dinamicamente.
 * A troca simultânea de buffers (Double Buffering) será implementada na Fase 2 para garantir transições assíncronas suaves sob o comando do ARM.
 * Efeitos avançados de mistura de cores (*color blending* para transparências parciais) não foram implementados nesta fase para poupar o limite de processamento de ALMs.
+
+### Referências
+
+ADAMS, V. Hunter. *VGA Driver in Verilog*. [S. l.], [s. d.]. Disponível em: https://vanhunteradams.com/DE1/VGA_Driver/Driver.html. Acesso em: 24 ago. 2026.
+
+PATTERSON, David A.; HENNESSY, John L. *Computer Organization and Design: The Hardware/Software Interface, ARM Edition*. [S. l.]: Morgan Kaufmann, 2016. (The Morgan Kaufmann Series in Computer Architecture and Design).
+
 
