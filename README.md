@@ -1,5 +1,3 @@
-# Projeto Coprocessador Gráfico em FPGA (Problema #1)
-
 **Universidade Estadual de Feira de Santana (UEFS)**  
 **Departamento de Tecnologia - Área de Eletrônica**  
 **Disciplina: Sistemas Digitais (TEC499) - 2026.2**  
@@ -108,7 +106,6 @@ O objetivo deste projeto é projetar o núcleo de um coprocessador gráfico em F
 | **STATE_SPRITE** | Move o sprite 0 com clamping nas bordas e controla o espelhamento. |
 | **STATE_RECT_COLOR** | Seleciona a cor do retângulo via `SW[3:0]`. |
 | **STATE_TRI_COLOR** | Seleciona a cor do triângulo via `SW[3:0]`. |
-| **STATE_TILE_EDIT** | Habilita a gravação e troca do Tile 2x2 do background ao acionar `SW[7]`. |
 
 * **`paleta_rom.v` — ROM de Paleta (256 cores):** 
   Converte índices de 8 bits em componentes RGB de 24 bits (8 bits por canal) usando uma ROM inicializada pelo arquivo `paleta.mif`. A paleta pode ser substituída para alterar o esquema de cores do sistema inteiro sem modificar os motores gráficos.
@@ -166,10 +163,6 @@ Para compilar e gravar o projeto na DE1-SoC:
 
 Após gravar o bitstream na placa, o sistema exibirá no monitor o background via Tilemap e o sprite centralizado.
 
-### Demonstração do Sistema
-<!-- Substitua o link abaixo pela sua imagem, GIF ou vídeo gravado na bancada -->
-![Demonstração do Sistema](link-do-seu-video-ou-gif-aqui)
-
 ### Controles de Demonstração (Botões - KEY)
 
 | Botão | Função |
@@ -191,18 +184,15 @@ As chaves de 0 a 3 assumem funções diferentes dependendo do modo ativado pela 
 | **SW[8]** | – | Espelha sprite horizontalmente | – |
 | **SW[9]** | – | Espelha sprite verticalmente | – |
 
-* **Modo Tile Swap:** Quando o sistema atinge o último estado na `KEY1`, a chave **SW[7]** se torna um gatilho para a escrita na RAM, permitindo trocar dinamicamente o tile do canto pelo do centro da tela.
-
 ### Sequência de Teste Sugerida
 
-1. Energize a placa e observe a cena inicial: background com tilemap e o sprite da nave centralizado.
-2. Mova as chaves `SW[0..3]` para verificar o scroll do background com wrap-around funcional.
-3. Pressione `KEY1` para mudar para o modo sprite e use as mesmas chaves para mover a nave.
-4. Ative `SW[8]` e `SW[9]` para verificar o espelhamento horizontal e vertical da nave.
-5. Pressione `KEY2` para exibir o retângulo e `KEY3` para exibir o triângulo.
-6. Pressione `KEY1` para os modos de cor e altere `SW[0..3]` para observar a mudança de cores dos polígonos.
-7. Pressione `KEY1` para acessar o modo de Edição de Tile e alterne `SW[7]` para ver a troca de um bloco 2x2 do background em tempo real.
-8. Pressione `KEY0` para confirmar que o reset retorna a cena ao estado inicial.
+1. Energize a placa e observe a cena inicial: background com tilemap e o sprite da nave centralizado.  <img width="3264" height="2448" alt="SGCAM_20260902_092907052 MP" src="https://github.com/user-attachments/assets/390e5f03-8cfe-457e-869b-f492c9d41af9" />
+2. Mova as chaves `SW[0..3]` para verificar o scroll do background com wrap-around funcional. <img width="384" height="216" alt="SGCAM_20260902_093009737" src="https://github.com/user-attachments/assets/9f5a8f7d-b364-48c3-943b-e4a815040471" /> <img width="384" height="216" alt="SGCAM_20260902_093009737 (2)" src="https://github.com/user-attachments/assets/d4d4b2e5-0c6a-40e5-a64d-1ea9db4001ad" /> <img width="384" height="216" alt="SGCAM_20260902_093009737 (3)" src="https://github.com/user-attachments/assets/badf1b54-5742-47ce-9b87-d65b14be13a1" /> <img width="384" height="216" alt="SGCAM_20260902_093009737 (4)" src="https://github.com/user-attachments/assets/1efc69b7-b6e1-4093-b675-be5f4347c210" />
+3. Pressione `KEY1` para mudar para o modo sprite e use as mesmas chaves para mover a nave. <img width="384" height="216" alt="SGCAM_20260902_093009737 (5)" src="https://github.com/user-attachments/assets/d8065e6d-f914-45a7-a21f-4cb72b4eab75" />
+4. Ative `SW[8]` e `SW[9]` para verificar o espelhamento horizontal e vertical da nave.  <img width="3264" height="2448" alt="SGCAM_20260902_092947733 MP" src="https://github.com/user-attachments/assets/2061836e-f09f-44c8-988b-37208b54cec9" /> <img width="3264" height="2448" alt="SGCAM_20260902_092955197 MP (1)" src="https://github.com/user-attachments/assets/d941a21a-e087-49c5-b569-706ee01f0f73" />
+5. Pressione `KEY2` para exibir/esconder o retângulo e `KEY3` para exibir/esconder o triângulo. <img width="3264" height="2448" alt="SGCAM_20260902_093603365 MP" src="https://github.com/user-attachments/assets/f0444aa5-426b-430d-8ea5-bdfdabdbe087" /> <img width="3264" height="2448" alt="SGCAM_20260902_093611426 MP" src="https://github.com/user-attachments/assets/c0a237f3-83b0-40c3-8de1-7ea2d6ff0927" />
+6. Pressione `KEY1` para os modos de cor e altere `SW[0..3]` para observar a mudança de cores dos polígonos. <img width="3264" height="2448" alt="SGCAM_20260902_093745579 MP" src="https://github.com/user-attachments/assets/399d10c5-6bf9-4dfe-9dc6-98ea08371314" />
+7. Pressione `KEY0` para confirmar que o reset retorna a cena ao estado inicial.
 
 ---
 
