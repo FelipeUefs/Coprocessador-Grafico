@@ -8,6 +8,7 @@ Para a elaboração do projeto, foi utilizado o kit de desenvolvimento DE1-SoC c
 O objetivo deste projeto é projetar o núcleo de um coprocessador gráfico em FPGA. O hardware foi desenvolvido visando a arquitetura de consoles clássicos de 16 bits, operando com suporte a um plano de fundo (baseado em tiles), sprite móvel e um rasterizador de polígonos. O coprocessador funciona de modo isolado nesta primeira fase, mas está preparado para integração via Memory-Mapped I/O (MMIO) com um driver Linux em Assembly (processador ARM) e uma aplicação em C em etapas futuras.
 
 <img width="600" alt="Placa DE1-SoC" src="https://github.com/user-attachments/assets/4e606e05-cef6-4a21-8f5b-80f50d49108b" />
+
 Imagem da placa DE1-SoC retirada do site da Altera
 
 ---
@@ -165,11 +166,14 @@ Após a compilação bem-sucedida.
 
 As imagens abaixo ilustram o processo
 
-<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 43 58" src="https://github.com/user-attachments/assets/6e250be9-1362-4259-b4f9-b82e2c4c6cdf" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 47 13" src="https://github.com/user-attachments/assets/654cf621-6d7d-44de-ae18-9ede44128874" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 50 04" src="https://github.com/user-attachments/assets/8b9da221-1f56-4cf7-aaa0-49d91b22c29b" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 51 45" src="https://github.com/user-attachments/assets/4dca78e9-76aa-405a-8aed-42448243c98e
-<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 51 45" src="https://github.com/user-attachments/assets/afb77ad0-a36f-4ff1-b776-d2201ca5f4b6" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 43 58" src="https://github.com/user-attachments/assets/49137a7c-ca8c-4604-84b7-0d52ed207c35" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 47 13" src="https://github.com/user-attachments/assets/e320263c-f143-45aa-b99c-becf88d4693a" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 19 56 12" src="https://github.com/user-attachments/assets/0fcefeb7-2430-42a2-b3cb-03ec20200c26" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 50 04" src="https://github.com/user-attachments/assets/f0ef902c-9ee5-4635-97d6-f24166dad4ce" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 51 45" src="https://github.com/user-attachments/assets/7d6f849b-ebe8-4375-abeb-fae1f682e1bc" />
+
+
+
 
 ---
 
