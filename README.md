@@ -156,7 +156,7 @@ Para compilar e gravar o projeto na DE1-SoC:
 4. Certifique-se de que os arquivos `.mif` (Memória de Inicialização) estão no mesmo diretório do projeto ou mapeados corretamente nos módulos MegaWizard/IP Catalog.
 5. Clique em **Start Compilation** e aguarde a finalização.
 > **Nota:**
-> Não é necessário gerar novas memórias nem  realizar a atribuição de pinos caso todos os arquivos do projeto tenham sido baixados, pois os arquivos de memória necessários já estão previamente gerados e incluídos no projeto.
+> Não é necessário gerar novas memórias nem  realizar a atribuição de pinos caso todos os arquivos do projeto tenham sido baixados, pois os arquivos de memória necessários e a atribuição de pinos já estão previamente gerados e incluídos no projeto.
 
  A compilação será finalizada quando a barra de progresso atingir **100%** e for exibida a mensagem **"Successful"**, indicando que o projeto foi compilado com sucesso.
  
