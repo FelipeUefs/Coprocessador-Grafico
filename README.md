@@ -1,4 +1,4 @@
-" />**Universidade Estadual de Feira de Santana (UEFS)**  
+**Universidade Estadual de Feira de Santana (UEFS)**  
 **Departamento de Tecnologia - Área de Eletrônica**  
 **Disciplina: Sistemas Digitais (TEC499) - 2026.2**  
 **Autores: Felipe Gomes, Mirela Mascarenhas e Caio Bruno**
@@ -153,7 +153,7 @@ Para compilar e gravar o projeto na DE1-SoC:
 2. Abra o Intel Quartus Prime Lite Edition.
 3. Vá em **File > Open Project** e selecione o arquivo do projeto `Problema1.qpf`.
 4. Certifique-se de que os arquivos `.mif` (Memória de Inicialização) estão no mesmo diretório do projeto ou mapeados corretamente nos módulos MegaWizard/IP Catalog.
-5. Clique em **Compile Design** e aguarde a finalização.
+5. Clique em **Start Compilation** e aguarde a finalização.
 > **Nota:**
 > Não é necessário gerar novas memórias nem  realizar a atribuição de pinos caso todos os arquivos do projeto tenham sido baixados, pois os arquivos de memória necessários já estão previamente gerados e incluídos no projeto.
 >  A compilação será finalizada quando a barra de progresso atingir **100%** e for exibida a mensagem **"Successful"**, indicando que o projeto foi compilado com sucesso.
@@ -168,6 +168,7 @@ As imagens abaixo ilustram o processo
 <img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 43 58" src="https://github.com/user-attachments/assets/6e250be9-1362-4259-b4f9-b82e2c4c6cdf" />
 <img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 47 13" src="https://github.com/user-attachments/assets/654cf621-6d7d-44de-ae18-9ede44128874" />
 <img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 50 04" src="https://github.com/user-attachments/assets/8b9da221-1f56-4cf7-aaa0-49d91b22c29b" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 51 45" src="https://github.com/user-attachments/assets/4dca78e9-76aa-405a-8aed-42448243c98e
 <img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 51 45" src="https://github.com/user-attachments/assets/afb77ad0-a36f-4ff1-b776-d2201ca5f4b6" />
 
 ---
