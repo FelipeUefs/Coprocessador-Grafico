@@ -158,15 +158,13 @@ Para compilar e gravar o projeto na DE1-SoC:
 > **Nota:**
 > Não é necessário gerar novas memórias nem  realizar a atribuição de pinos caso todos os arquivos do projeto tenham sido baixados, pois os arquivos de memória necessários e a atribuição de pinos já estão previamente gerados e incluídos no projeto.
 
- A compilação será finalizada quando a barra de progresso atingir **100%** e for exibida a mensagem **"Successful"**, indicando que o projeto foi compilado com sucesso.
- 
 **Programação da FPGA**
 
-Após a compilação bem-sucedida.
 1. Conecte a DE1-SoC ao computador via USB-Blaster e ligue a placa.
-2. Vá em **Tools > Programmer**.
+2. Vá em **Programmer**.
 3. Clique em **Start** para gravar o bitstream na FPGA.
-
+   
+ A compilação será finalizada quando a barra de progresso atingir **100%** e for exibida a mensagem **"Successful"**, indicando que o projeto foi compilado com sucesso.
 As imagens abaixo ilustram o processo
 
 <img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 43 58" src="https://github.com/user-attachments/assets/49137a7c-ca8c-4604-84b7-0d52ed207c35" />
@@ -174,9 +172,6 @@ As imagens abaixo ilustram o processo
 <img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 19 56 12" src="https://github.com/user-attachments/assets/0fcefeb7-2430-42a2-b3cb-03ec20200c26" />
 <img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 50 04" src="https://github.com/user-attachments/assets/f0ef902c-9ee5-4635-97d6-f24166dad4ce" />
 <img width="1600" height="900" alt="WhatsApp Image 2026-09-07 at 18 51 45" src="https://github.com/user-attachments/assets/7d6f849b-ebe8-4375-abeb-fae1f682e1bc" />
-
-
-
 
 ---
 
