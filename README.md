@@ -99,7 +99,7 @@ Imagem da placa DE1-SoC retirada do site da Altera
   Implementa rasterização por varredura para **retângulos** e **triângulos** usando aritmética inteira pura. Para o retângulo, a detecção é feita por comparação direta das coordenadas com os limites `(x0,y0)-(x1,y1)`. Para o triângulo, utiliza o método das **funções de aresta**: um pixel está dentro do triângulo se estiver do mesmo lado (todos positivos = CCW, ou todos negativos = CW) das três arestas, calculado via produto vetorial 2D.
 
 * **`unidade_de_controle.v` — Unidade de Controle (FSM):** 
-  Máquina de estados que interpreta os botões e chaves da placa para controlar a cena em tempo de execução. As atualizações só ocorrem no pulso `fim_de_quadro` (gerado ao final de cada frame), garantindo que mudanças de posição/scroll aconteçam entre frames sem rasgo de imagem. O botão `KEY1` cicla entre 5 estados de operação.
+  Máquina de estados que interpreta os botões e chaves da placa para controlar a cena em tempo de execução. As atualizações só ocorrem no pulso `fim_de_quadro` (gerado ao final de cada frame), garantindo que mudanças de posição/scroll aconteçam entre frames sem rasgo de imagem. O botão `KEY1` cicla entre 4 estados de operação.
 
 | Estado | Função das Chaves SW |
 | :--- | :--- |
@@ -187,7 +187,7 @@ Após gravar o bitstream na placa, o sistema exibirá no monitor o background vi
 | Botão | Função |
 | :--- | :--- |
 | **KEY0** | Reset geral - reinicia todos os módulos ao estado inicial. |
-| **KEY1** | Alterna entre os modos de controle (Scroll → Sprite → Cor Retângulo → Cor Triângulo → Tile Swap). |
+| **KEY1** | Alterna entre os modos de controle (Scroll → Sprite → Cor Retângulo → Cor Triângulo). |
 | **KEY2** | Liga/Desliga a exibição do retângulo geométrico. |
 | **KEY3** | Liga/Desliga a exibição do triângulo geométrico. |
 
